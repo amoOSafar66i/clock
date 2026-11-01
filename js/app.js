@@ -60,40 +60,68 @@
 //     hpElement.innerHTML = userHp;
 //     guessForm.reset();
 //     e.preventDefault();
+// // });
+// const systemRandomNumber = Math.floor(Math.random() * 100);
+// console.log(systemRandomNumber);
+
+// const guessForm = document.querySelector("#guessForm");
+// const resultText = document.querySelector(".result");
+// const hpElement = document.querySelector(".hp");
+
+// let userHp = 10;
+
+// function getUserGuess(e) {
+//     const userGuess = Number(e.target.userGuess.value);
+
+//     if (userGuess > systemRandomNumber) {
+//         resultText.innerHTML = "Your number is bigger than answer";
+//     } else if (userGuess < systemRandomNumber) {
+//         resultText.innerHTML = "Your number is smaller than answer";
+//     } else {
+//         resultText.innerHTML = "You win!";
+//     }
+// }
+
+// guessForm.addEventListener("submit", (e) => {
+//     e.preventDefault();
+
+//     if (userHp <= 0) {
+//         resultText.innerHTML = "You lose!";
+//         return;
+//     }
+
+//     getUserGuess(e);
+
+//     userHp--;
+//     hpElement.innerHTML = userHp;
+
+//     guessForm.reset();
 // });
-const systemRandomNumber = Math.floor(Math.random() * 100);
-console.log(systemRandomNumber);
+// const menu = document.querySelector(".menu");
+// menu.addEventListener("click", () => {
+//  console.log("cliced");
 
-const guessForm = document.querySelector("#guessForm");
-const resultText = document.querySelector(".result");
-const hpElement = document.querySelector(".hp");
 
-let userHp = 10;
 
-function getUserGuess(e) {
-    const userGuess = Number(e.target.userGuess.value);
 
-    if (userGuess > systemRandomNumber) {
-        resultText.innerHTML = "Your number is bigger than answer";
-    } else if (userGuess < systemRandomNumber) {
-        resultText.innerHTML = "Your number is smaller than answer";
-    } else {
-        resultText.innerHTML = "You win!";
-    }
-}
 
-guessForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+// menu.classList.toggle("active")
 
-    if (userHp <= 0) {
-        resultText.innerHTML = "You lose!";
-        return;
-    }
+// });
+let form = document.getElementById("myForm");
 
-    getUserGuess(e);
+form.addEventListener("submit", function(event) {
 
-    userHp--;
-    hpElement.innerHTML = userHp;
+    event.preventDefault();
 
-    guessForm.reset();
+    let text = document.getElementById("textInput").value;
+
+    let result = text.toLowerCase();
+
+    result = result.trim();
+
+    result = result.replaceAll(" ", "");
+
+    console.log(result);
+
 });

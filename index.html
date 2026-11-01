@@ -1,32 +1,33 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حدس عدد
-    </title>
+    <title>Text Cleaner</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
-<body><div class="game">
-    <h1>Guess The Number</h1>
+<body>
 
- 
+    <div class="container">
 
-    <form id="guessForm">
-        <input type="number"
-            name="userGuess"
-        >
+        <h2>Text Cleaner</h2>
 
-        <button type="submit">Guess</button>
-    </form>
+        <p>Enter your messy text below</p>
 
-    <p class="result"></p>
+        <form id="myForm">
 
-    <p class="attempts">
-       HP   💙 💙 💙 💙 💙 💙 💙 💙 💙 💙: <span class="hp">10</span>
-    </p>
-</div>
+            <textarea id="textInput" name="Write your text here..."></textarea>
 
-<script src="js/app.js"></script>
+            <button type="submit">Clean Text</button>
+
+        </form>
+
+        <div class="result-box">
+            <h3>Result:</h3>
+            <p id="result"></p>
+        </div>
+
+    </div>
+
+    <script src="js/app.js"></script>
 
 </body>
 </html>
