@@ -108,20 +108,27 @@
 // menu.classList.toggle("active")
 
 // });
-let form = document.getElementById("myForm");
+let hourEl = document.querySelector(".hour");
+let minuteEl = document.querySelector(".min");
+let secondEl = document.querySelector(".sec");
+let dateEl = document.querySelector(".date");
 
-form.addEventListener("submit", function(event) {
+setInterval(() => {
 
-    event.preventDefault();
+    const now = new Date();
 
-    let text = document.getElementById("textInput").value;
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
 
-    let result = text.toLowerCase();
+    const day = now.getDate();
+    const month = now.getMonth() + 1;
+    const year = now.getFullYear();
 
-    result = result.trim();
+    hourEl.innerHTML = String(hours).padStart(2, "0");
+    minuteEl.innerHTML = String(minutes).padStart(2, "0");
+    secondEl.innerHTML = String(seconds).padStart(2, "0");
 
-    result = result.replaceAll(" ", "");
+    dateEl.innerHTML = year + " / " + month + " / " + day;
 
-    console.log(result);
-
-});
+}, 1000);

@@ -1,33 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Text Cleaner</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 
-    <div class="container">
+    <div class="clock-container">
 
-        <h2>Text Cleaner</h2>
+        <h1>Digital Clock</h1>
 
-        <p>Enter your messy text below</p>
+        <div class="clock">
+            <div class="box">
+                <span class="hour">00</span>
+                <p>HOURS</p>
+            </div>
 
-        <form id="myForm">
+            <div class="box">
+                <span class="min">00</span>
+                <p>MINUTES</p>
+            </div>
 
-            <textarea id="textInput" name="Write your text here..."></textarea>
-
-            <button type="submit">Clean Text</button>
-
-        </form>
-
-        <div class="result-box">
-            <h3>Result:</h3>
-            <p id="result"></p>
+            <div class="box">
+                <span class="sec">00</span>
+                <p>SECONDS</p>
+            </div>
         </div>
+
+        <div class="date"></div>
 
     </div>
 
     <script src="js/app.js"></script>
-
 </body>
 </html>
